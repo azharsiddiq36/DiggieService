@@ -1,0 +1,2 @@
+rootProject.name = "DiggieService"
+include ':app'
