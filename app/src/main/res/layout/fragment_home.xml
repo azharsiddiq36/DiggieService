@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nested_scroll_view"
@@ -62,7 +64,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/image_1"
+                        android:id="@+id/iv_newproduct_1"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:background="@color/grey_40"
@@ -85,11 +87,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:maxLines="1"
+                                android:id="@+id/highlight1"
                                 android:singleLine="true"
                                 android:text="Mauris sagittis non elit"
                                 android:textColor="@color/grey_90" />
 
                             <TextView
+                                android:id="@+id/tv_price"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Kodaline" />
@@ -122,7 +126,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/image_2"
+                        android:id="@+id/iv_newproduct_2"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:background="@color/grey_40"
@@ -145,11 +149,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:maxLines="1"
+                                android:id="@+id/highlight2"
                                 android:singleLine="true"
                                 android:text="Aliquam"
                                 android:textColor="@color/grey_90" />
 
                             <TextView
+                                android:id="@+id/tv_price_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="One Republic" />
@@ -219,13 +225,14 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/image_3"
+                        android:id="@+id/iv_technician_1"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:background="@color/grey_40"
                         android:scaleType="centerCrop" />
 
                     <TextView
+                        android:id="@+id/tv_technician_1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
@@ -251,7 +258,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/image_4"
+                        android:id="@+id/iv_technician_2"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:background="@color/grey_40"
@@ -261,6 +268,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:maxLines="1"
+                        android:id="@+id/tv_technician_2"
                         android:padding="@dimen/spacing_large"
                         android:singleLine="true"
                         android:text="Quisque"
@@ -283,7 +291,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/image_5"
+                        android:id="@+id/iv_technician_3"
                         android:layout_width="match_parent"
                         android:layout_height="120dp"
                         android:background="@color/grey_40"
@@ -295,6 +303,7 @@
                         android:maxLines="1"
                         android:padding="@dimen/spacing_large"
                         android:singleLine="true"
+                        android:id="@+id/tv_technician_3"
                         android:text="Aliquam ac elit"
                         android:textColor="@color/grey_90" />
 
@@ -334,7 +343,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_xxxlarge"
             android:orientation="horizontal"
             android:padding="@dimen/spacing_medium"
             android:visibility="visible">
@@ -353,7 +362,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/image_6"
+                        android:id="@+id/iv_popular_1"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:background="@color/grey_40"
@@ -373,6 +382,7 @@
                             android:orientation="vertical">
 
                             <TextView
+                                android:id="@+id/tv_popular_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:maxLines="1"
@@ -381,6 +391,7 @@
                                 android:textColor="@color/grey_90" />
 
                             <TextView
+                                android:id="@+id/tv_address_1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Adipiscing" />
@@ -413,7 +424,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:id="@+id/image_7"
+                        android:id="@+id/iv_popular_2"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"
                         android:background="@color/grey_40"
@@ -436,11 +447,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:maxLines="1"
+                                android:id="@+id/tv_popular_2"
                                 android:singleLine="true"
                                 android:text="Placerat vel ipsum"
                                 android:textColor="@color/grey_90" />
 
                             <TextView
+                                android:id="@+id/tv_address_2"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="amet rutrum" />
@@ -464,3 +477,4 @@
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
+</layout>

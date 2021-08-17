@@ -1,4 +1,4 @@
-package com.example.diggieservice
+package com.example.diggieservice.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -1,5 +1,7 @@
 package com.example.rdiandroiddevelopertest.api
 
+import com.example.diggieservice.model.jual.Jual
+import com.example.diggieservice.model.teknisi.Teknisi
 import com.example.rdiandroiddevelopertest.model.Author
 import com.example.rdiandroiddevelopertest.model.Genre
 import com.example.rdiandroiddevelopertest.model.ItemsMovie
@@ -35,4 +37,16 @@ interface DigieServiceInterface {
         @Query("language")language: String,
         @Query("page")page: Int,
     ):Call<Author>
+
+
+    @GET("/api/jual-all/{pelanggan}/{order}")
+    fun getJual(
+        @Path("pelanggan")pelanggan:String,
+        @Path("order")order:String,
+    ):Call<Jual>
+    @GET("/api/teknisi-all/{param}/{order}")
+    fun getTechnician(
+        @Path("param")param:String,
+        @Path("order")order:String
+    ):Call<Teknisi>
 }

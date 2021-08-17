@@ -4,13 +4,13 @@
     package="com.example.diggieservice">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name=".BaseApplication"
+        android:name=".di.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,7 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiggieService"
         android:usesCleartextTraffic="true">
-        <activity android:name=".feature.message.MessageActivity"></activity>
+        <activity android:name=".feature.shop.ListShopActivity"></activity>
+        <activity android:name=".feature.shop.ShopDetailsAcitivity" />
+        <activity android:name=".feature.message.MessageActivity" />
         <activity
             android:name=".feature.splash.SplashActivity"
             android:label="@string/app_name"
