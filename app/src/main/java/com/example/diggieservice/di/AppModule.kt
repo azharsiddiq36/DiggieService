@@ -3,6 +3,7 @@ package com.example.diggieservice.di
 import com.example.diggieservice.enum.Constant
 import com.example.diggieservice.lib.PictureLib
 import com.example.rdiandroiddevelopertest.api.DigieServiceInterface
+import com.example.rdiandroiddevelopertest.repository.NavigatorRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -35,11 +36,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideConstant() = Constant
-//    @Singleton
-//    @Provides
-//    fun provideRetrofit(@ApplicationContext context: Context):JualRepository{
-//        return JualRepository(context)
-//    }
+    fun provideNavigatorRepository() = NavigatorRepository
+
 
 }

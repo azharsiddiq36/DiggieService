@@ -2,7 +2,11 @@ package com.example.rdiandroiddevelopertest.repository
 
 import android.content.Context
 import android.content.Intent
-import android.widget.Toast
+import android.util.Log
+import com.example.diggieservice.enum.Constant.FINDBUG
+import com.example.diggieservice.enum.Constant.SELL
+import com.example.diggieservice.feature.shop.activity.ShopDetailsAcitivity
+import com.example.diggieservice.model.jual.Result
 
 
 object NavigatorRepository {
@@ -11,9 +15,10 @@ object NavigatorRepository {
 //        intent.putExtra(Constant.genreId,genreId)
 //        context.startActivity(intent)
 //    }
-//    fun openDetailsMovieActivity(context: Context,movieId:String?){
-//        val intent = Intent(context,DetailsMovieActivity::class.java)
-//        intent.putExtra(Constant.movieId,movieId)
-//        context.startActivity(intent)
-//    }
+    fun openShopDetailsActivity(context: Context, jual: Result){
+        val intent = Intent(context,ShopDetailsAcitivity::class.java)
+        intent.putExtra(SELL,jual)
+         Log.d(FINDBUG, "openShopDetailsActivity: 21"+jual.jual_judul)
+        context.startActivity(intent)
+    }
 }

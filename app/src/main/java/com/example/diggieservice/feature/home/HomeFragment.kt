@@ -1,7 +1,6 @@
 package com.example.diggieservice.feature.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,21 +9,19 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import com.bumptech.glide.Glide
 import com.example.diggieservice.MainActivity
 import com.example.diggieservice.R
 import com.example.diggieservice.databinding.FragmentHomeBinding
-import com.example.diggieservice.enum.Constant
 import com.example.diggieservice.enum.Constant.ASC
 import com.example.diggieservice.enum.Constant.CUSTOMER
 import com.example.diggieservice.enum.Constant.TECHNICIAN_ID
 import com.example.diggieservice.enum.Constant.TECHNICIAN_TOTAL_SCORE
 import com.example.diggieservice.lib.PictureLib.loadPicture
 import com.example.diggieservice.model.jual.Jual
+import com.example.diggieservice.model.jual.Result
 import com.example.diggieservice.model.teknisi.Teknisi
+import com.example.rdiandroiddevelopertest.repository.NavigatorRepository.openShopDetailsActivity
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
@@ -110,7 +107,8 @@ class HomeFragment : Fragment() {
             loadPicture(it,_technician.result[0].teknisi_foto,_binding.ivTechnician3)
         }
     }
-    private fun loadNewsHighLight(fragmentActivity: FragmentActivity, _jual: Jual?) =
+    private fun loadNewsHighLight(fragmentActivity: FragmentActivity, _jual: Jual?){
+
         if (_jual!!.result.size>1){
             _binding.highlight1.text = _jual.result[0].jual_judul
             loadPicture(fragmentActivity,_jual.result[0].jual_foto,_binding.ivNewproduct1)
@@ -118,6 +116,12 @@ class HomeFragment : Fragment() {
             _binding.highlight2.text = _jual.result[1].jual_judul
             loadPicture(fragmentActivity,_jual.result[1].jual_foto,_binding.ivNewproduct2)
             _binding.tvPrice2.text = "Rp ${_jual.result[1].jual_harga}"
+            _binding.cvNewProduct1.setOnClickListener {
+                openShopDetailsActivity(fragmentActivity,_jual.result[0])
+            }
+            _binding.cvNewProduct2.setOnClickListener {
+                openShopDetailsActivity(fragmentActivity,_jual.result[1])
+            }
         }
         else{
             _binding.highlight1.text = _jual.result[0].jual_judul
@@ -126,5 +130,13 @@ class HomeFragment : Fragment() {
             _binding.highlight2.text = _jual.result[0].jual_judul
             loadPicture(fragmentActivity,_jual.result[0].jual_foto,_binding.ivNewproduct2)
             _binding.tvPrice2.text = "Rp ${_jual.result[0].jual_harga}"
+            _binding.cvNewProduct1.setOnClickListener {
+                openShopDetailsActivity(fragmentActivity,_jual.result[0])
+            }
+            _binding.cvNewProduct2.setOnClickListener {
+                openShopDetailsActivity(fragmentActivity,_jual.result[0])
+            }
         }
+
+    }
 }

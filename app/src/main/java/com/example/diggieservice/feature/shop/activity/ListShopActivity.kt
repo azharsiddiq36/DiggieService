@@ -1,4 +1,4 @@
-package com.example.diggieservice.feature.shop
+package com.example.diggieservice.feature.shop.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

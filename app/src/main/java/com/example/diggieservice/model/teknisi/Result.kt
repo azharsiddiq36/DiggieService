@@ -1,5 +1,9 @@
 package com.example.diggieservice.model.teknisi
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Result(
     val created_at: String,
     val teknisi_alamat: String,
@@ -14,4 +18,4 @@ data class Result(
     val teknisi_total_responden: Double,
     val teknisi_total_score: Double,
     val updated_at: String
-)
+): Parcelable

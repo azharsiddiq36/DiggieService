@@ -14,4 +14,7 @@ object Constant {
     //teknisi
     const val TECHNICIAN_ID = "teknisi_id"
     const val TECHNICIAN_TOTAL_SCORE = "teknisi_total_score"
+
+    //jual
+    const val SELL = "PENJUALAN"
 }

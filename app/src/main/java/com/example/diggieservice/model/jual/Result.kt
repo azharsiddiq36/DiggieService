@@ -1,5 +1,11 @@
 package com.example.diggieservice.model.jual
 
+import android.os.Parcelable
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class Result (
     val created_at: String,
     val jenis_id: Int,
@@ -24,7 +30,7 @@ data class Result (
     val teknisi_lng: String,
     val teknisi_nama: String,
     val teknisi_sertifikat: String,
-    val teknisi_total_responden: Int,
-    val teknisi_total_score: Int,
+    val teknisi_total_responden: Double,
+    val teknisi_total_score: Double,
     val updated_at: String
-)
+):Parcelable
