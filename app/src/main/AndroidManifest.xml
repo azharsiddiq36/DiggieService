@@ -18,7 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiggieService"
         android:usesCleartextTraffic="true">
-        <activity android:name=".feature.shop.activity.ListShopActivity"></activity>
+        <activity android:name=".feature.login.LoginActivity"></activity>
+        <activity android:name=".feature.shop.activity.ListShopActivity" />
         <activity android:name=".feature.shop.activity.ShopDetailsAcitivity" />
         <activity android:name=".feature.message.MessageActivity" />
         <activity

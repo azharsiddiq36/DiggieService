@@ -17,4 +17,9 @@ object Constant {
 
     //jual
     const val SELL = "PENJUALAN"
+    const val JENIS = "JENIS"
+    const val TERBARU = "TERBARU"
+    const val TERPOPULER = "TERPOPULER"
+    const val TERDEKAT = "TERDEKAT"
+
 }

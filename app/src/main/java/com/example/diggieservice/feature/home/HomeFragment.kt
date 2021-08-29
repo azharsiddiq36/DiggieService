@@ -16,10 +16,12 @@ import com.example.diggieservice.enum.Constant.ASC
 import com.example.diggieservice.enum.Constant.CUSTOMER
 import com.example.diggieservice.enum.Constant.TECHNICIAN_ID
 import com.example.diggieservice.enum.Constant.TECHNICIAN_TOTAL_SCORE
+import com.example.diggieservice.enum.Constant.TERBARU
 import com.example.diggieservice.lib.PictureLib.loadPicture
 import com.example.diggieservice.model.jual.Jual
-import com.example.diggieservice.model.jual.Result
+
 import com.example.diggieservice.model.teknisi.Teknisi
+import com.example.rdiandroiddevelopertest.repository.NavigatorRepository.openListShopActivity
 import com.example.rdiandroiddevelopertest.repository.NavigatorRepository.openShopDetailsActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -42,6 +44,9 @@ class HomeFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        _binding.tvSelanjutnyaTerbaru.setOnClickListener {
+            openListShopActivity(requireContext(),TERBARU)
+        }
         activity?.let {
             jualViewModel.getJualAll(CUSTOMER, ASC)?.observe(it, Observer { _jual->
                 if (_jual.result.size!=0){

@@ -7,10 +7,7 @@ import com.example.rdiandroiddevelopertest.model.Genre
 import com.example.rdiandroiddevelopertest.model.ItemsMovie
 import com.example.rdiandroiddevelopertest.model.Movie
 import retrofit2.Call
-import retrofit2.http.GET
-import retrofit2.http.PATCH
-import retrofit2.http.Path
-import retrofit2.http.Query
+import retrofit2.http.*
 
 interface DigieServiceInterface {
     @GET("/3/genre/movie/list")
@@ -49,4 +46,8 @@ interface DigieServiceInterface {
         @Path("param")param:String,
         @Path("order")order:String
     ):Call<Teknisi>
+//    @FormUrlEncoded
+//    @POST("/api/user-one")(
+//        @Path("username")
+//    )
 }
